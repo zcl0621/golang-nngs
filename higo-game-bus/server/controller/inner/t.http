@@ -1,0 +1,18 @@
+#### start score
+POST http://127.0.0.1:8081/api/v3/game-service/inner/score/start
+Content-Type: application/json
+
+{
+  "data": "eJxEybGqwjAUgOF3+ecztMO9YEZBVwcHlZBBmwM92CaSGAXFdxdBcPz4nljE0XcdwpxvWnHes0RY/RHEs0NY/xOCUNr0eYbRklZFOOfZcJ1wyscS91t7KK5ffH342dIwtaibe9JSR7vgrqXp6x0AAP//9bIm5g=="
+}
+
+### end score
+POST http://127.0.0.1:8081/api/v3/game-service/inner/score/result
+Content-Type: application/json
+
+{
+  "id": "100"
+}
+
+### areasocre
+POST http://higo-api-dev.elf-go.com/

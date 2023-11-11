@@ -1,0 +1,6 @@
+http:
+  port: 80
+game_pod_namespace: higo-dev
+game_pod_name: game-node
+game_pod_service: game-node
+game_pod_numb: 5

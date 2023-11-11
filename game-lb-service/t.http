@@ -1,0 +1,9 @@
+### GET request with a header
+GET http://127.0.0.1:8080/api/v3/game-service/play/move?game_id=999
+Accept: application/json
+
+
+### GET
+GET https://higo-api.elf-go.com/api/v2/content-service/admin/classroom-history/all?classroom_id=12597&page=1
+Accept: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMTIsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjoxNjEsInRlYWNoZXJfbmFtZSI6Iua1i-ivleaVmeW4iDEiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgzMjk3MDYyfQ.iQTa-Tn7Nun6Zaiu9RcNBnZp-Z_7kAz2eBkJ-k39Wvg

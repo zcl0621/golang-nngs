@@ -1,0 +1,673 @@
+definitions:
+  request.CallEndRequest:
+    properties:
+      end_time:
+        type: integer
+      game_id:
+        type: integer
+      sgf:
+        type: string
+      start_time:
+        type: integer
+      win:
+        description: 1 黑 2 白 3 和
+        type: integer
+      win_result:
+        description: 输赢原因 B+R 黑胜白认输 B+T 黑胜白超时 W+R 白胜黑认输 W+T 白胜黑超时 B+C1 黑胜吃1子 W+C1
+          白胜吃一子 B+L 黑胜白未参加 W+L 白胜黑未参加 Draw 和
+        type: string
+    required:
+    - game_id
+    - win
+    - win_result
+    type: object
+  request.EnterRequest:
+    properties:
+      game_id:
+        type: integer
+      user_hash:
+        type: string
+      user_id:
+        type: string
+    required:
+    - game_id
+    - user_hash
+    - user_id
+    type: object
+  request.InfoRequest:
+    properties:
+      game_id:
+        type: integer
+      user_hash:
+        type: string
+      user_id:
+        type: string
+    required:
+    - game_id
+    - user_hash
+    - user_id
+    type: object
+  request.MoveRequest:
+    properties:
+      c:
+        type: integer
+      game_id:
+        type: integer
+      user_hash:
+        type: string
+      user_id:
+        type: string
+      x:
+        type: integer
+      "y":
+        type: integer
+    required:
+    - game_id
+    - user_hash
+    - user_id
+    type: object
+  request.OwnershipRequest:
+    properties:
+      game_id:
+        type: integer
+      sgf:
+        type: string
+    type: object
+  request.PassRequest:
+    properties:
+      c:
+        type: integer
+      game_id:
+        type: integer
+      user_hash:
+        type: string
+      user_id:
+        type: string
+    required:
+    - game_id
+    - user_hash
+    - user_id
+    type: object
+  request.ResignRequest:
+    properties:
+      game_id:
+        type: integer
+      user_hash:
+        type: string
+      user_id:
+        type: string
+    required:
+    - game_id
+    - user_hash
+    - user_id
+    type: object
+  responses.AnalysisRootInfo:
+    properties:
+      currentPlayer:
+        type: string
+      scoreLead:
+        type: number
+      scoreSelfplay:
+        type: number
+      scoreStdev:
+        type: number
+      symHash:
+        type: string
+      thisHash:
+        type: string
+      utility:
+        type: number
+      visits:
+        type: integer
+      winrate:
+        type: number
+    type: object
+  responses.AnalysisScoreData:
+    properties:
+      id:
+        type: string
+      ownership:
+        items:
+          type: number
+        type: array
+      rootInfo:
+        $ref: '#/definitions/responses.AnalysisRootInfo'
+    type: object
+  responses.CanPlayResponse:
+    properties:
+      next_color:
+        type: integer
+    type: object
+  responses.EndResponse:
+    properties:
+      win:
+        description: 0 无 1 黑 2 白
+        type: integer
+      win_result:
+        description: 输赢原因
+        type: string
+    type: object
+  responses.InfoResponse:
+    properties:
+      black_byo_yomi:
+        type: integer
+      black_byo_yomi_time:
+        type: integer
+      black_captured:
+        type: integer
+      black_enter:
+        type: boolean
+      black_return_stone:
+        type: number
+      black_score:
+        type: number
+      black_time:
+        type: integer
+      black_user_account:
+        type: string
+      black_user_actual_name:
+        type: string
+      black_user_avatar:
+        type: string
+      black_user_hash:
+        type: string
+      black_user_id:
+        type: string
+      black_user_level:
+        type: string
+      black_user_name:
+        type: string
+      black_user_nick_name:
+        type: string
+      black_user_online:
+        type: boolean
+      black_user_type:
+        type: integer
+      board_size:
+        description: 9 13 19
+        type: integer
+      business_type:
+        description: 业务类型
+        type: string
+      enable_move_time:
+        description: 是否开启第一步倒计时 0 否 1 是
+        type: integer
+      end_time:
+        type: integer
+      is_end:
+        type: boolean
+      is_start:
+        type: boolean
+      km:
+        description: 贴目
+        type: number
+      max_step:
+        type: integer
+      move_time:
+        description: 单步落子时长
+        type: integer
+      not_enter_time:
+        description: 一方未进入或两方都未进入 强制结束时间
+        type: integer
+      now_black_byo_yomi:
+        type: integer
+      now_black_byo_yomi_time:
+        type: integer
+      now_black_time:
+        type: integer
+      now_move_time:
+        type: integer
+      now_white_byo_yomi:
+        type: integer
+      now_white_byo_yomi_time:
+        type: integer
+      now_white_time:
+        type: integer
+      start_time:
+        type: integer
+      step:
+        type: integer
+      summation_count:
+        description: 申请和棋数量
+        type: integer
+      territory_step:
+        type: integer
+      turn:
+        type: integer
+      white_byo_yomi:
+        type: integer
+      white_byo_yomi_time:
+        type: integer
+      white_captured:
+        type: integer
+      white_enter:
+        type: boolean
+      white_score:
+        type: number
+      white_time:
+        type: integer
+      white_user_account:
+        type: string
+      white_user_actual_name:
+        type: string
+      white_user_avatar:
+        type: string
+      white_user_hash:
+        type: string
+      white_user_id:
+        type: string
+      white_user_level:
+        type: string
+      white_user_name:
+        type: string
+      white_user_nick_name:
+        type: string
+      white_user_online:
+        type: boolean
+      white_user_type:
+        type: integer
+      win:
+        description: 0 无 1 黑 2 白 3 和 4 弃权
+        type: integer
+      win_capture:
+        type: integer
+      win_result:
+        description: 输赢原因 B+2.5 黑胜2.5目 W+2.5 白胜2.5目 B+R 黑胜白认输 B+T 黑胜白超时 W+R 白胜黑认输
+          W+T 白胜黑超时 B+C1 黑胜吃1子 W+C1 白胜吃一子 B+L 黑胜白未参加 W+L  白胜黑未参加 B+A 黑胜仲裁 W+A 白胜仲裁
+          Draw 和 Abstain 弃权
+        type: string
+    type: object
+  responses.InnerAreaScoreResponse:
+    properties:
+      b_score:
+        type: number
+      controversy_count:
+        type: integer
+      end_score:
+        type: number
+      w_score:
+        type: number
+    type: object
+  responses.MoveResponse:
+    properties:
+      next_color:
+        description: 下一步颜色 0 任意 1 黑 2 白
+        type: integer
+    type: object
+  responses.OwnerShip:
+    properties:
+      c:
+        type: integer
+      size:
+        type: number
+      x:
+        type: integer
+      "y":
+        type: integer
+    type: object
+  responses.OwnerShipResponse:
+    properties:
+      analysis_data:
+        $ref: '#/definitions/responses.AnalysisScoreData'
+      ownership:
+        items:
+          $ref: '#/definitions/responses.OwnerShip'
+        type: array
+    type: object
+  responses.PassResponse:
+    properties:
+      next_color:
+        description: 下一步颜色 0 任意 1 黑 2 白
+        type: integer
+    type: object
+  responses.SGFResponse:
+    properties:
+      sgf:
+        type: string
+    type: object
+  responses.StandardResponse:
+    properties:
+      code:
+        description: 0 成功 1失败
+        type: integer
+      data: {}
+      message:
+        description: 提示语
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v3/game-service/inner/area-score:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.OwnershipRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.InnerAreaScoreResponse'
+      summary: 数目
+      tags:
+      - 对弈
+  /api/v3/game-service/inner/call-end:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.CallEndRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.StandardResponse'
+      summary: 结束
+      tags:
+      - 内部
+  /api/v3/game-service/inner/init:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.StandardResponse'
+      summary: 初始化(内部)
+      tags:
+      - 对弈
+  /api/v3/game-service/play/agree-score:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.EndResponse'
+      summary: 同意数目
+      tags:
+      - 对弈
+  /api/v3/game-service/play/agree-summation:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.EndResponse'
+      summary: 同意和棋
+      tags:
+      - 对弈
+  /api/v3/game-service/play/apply-score:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 申请数目
+      tags:
+      - 对弈
+  /api/v3/game-service/play/apply-summation:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 申请和棋
+      tags:
+      - 对弈
+  /api/v3/game-service/play/canplay:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.CanPlayResponse'
+      summary: 落子方
+      tags:
+      - 对弈
+  /api/v3/game-service/play/enter:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.EnterRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 进入
+      tags:
+      - 对弈
+  /api/v3/game-service/play/info:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.InfoResponse'
+      summary: 基础信息
+      tags:
+      - 对弈
+  /api/v3/game-service/play/move:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.MoveRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.MoveResponse'
+      summary: 落子
+      tags:
+      - 对弈
+  /api/v3/game-service/play/ownership:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.OwnershipRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.OwnerShipResponse'
+      summary: 形势判断
+      tags:
+      - 对弈
+  /api/v3/game-service/play/pass:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.PassRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.PassResponse'
+      summary: 停一手
+      tags:
+      - 对弈
+  /api/v3/game-service/play/reject-score:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 拒绝数目
+      tags:
+      - 对弈
+  /api/v3/game-service/play/reject-summation:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      summary: 拒绝和棋
+      tags:
+      - 对弈
+  /api/v3/game-service/play/resign:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResignRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.EndResponse'
+      summary: 认输
+      tags:
+      - 对弈
+  /api/v3/game-service/play/score:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.EndResponse'
+      summary: 数目
+      tags:
+      - 对弈
+  /api/v3/game-service/player/sgf:
+    post:
+      parameters:
+      - description: 对弈
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/request.InfoRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/responses.SGFResponse'
+      summary: sgf
+      tags:
+      - 对弈
+swagger: "2.0"

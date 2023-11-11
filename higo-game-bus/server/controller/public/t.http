@@ -1,0 +1,34 @@
+### admin battle list
+GET http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/battle/list?user_id=3
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NTYsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjowLCJ0ZWFjaGVyX25hbWUiOiIiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgwNjg2ODY0fQ._gPY7vouJg4kiDbOmxJorVWC1IeqnAcTfd77mY5btak
+
+
+### admin game list
+GET http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/game/list
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NTYsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjowLCJ0ZWFjaGVyX25hbWUiOiIiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgwNjg2ODY0fQ._gPY7vouJg4kiDbOmxJorVWC1IeqnAcTfd77mY5btak
+
+### admin game info
+GET http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/game/info?game_id=203109
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NTYsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjowLCJ0ZWFjaGVyX25hbWUiOiIiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgwNjg2ODY0fQ._gPY7vouJg4kiDbOmxJorVWC1IeqnAcTfd77mY5btak
+
+
+### admin game sgf
+GET http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/game/sgf?game_id=203109
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NTYsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjowLCJ0ZWFjaGVyX25hbWUiOiIiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgwNjg2ODY0fQ._gPY7vouJg4kiDbOmxJorVWC1IeqnAcTfd77mY5btak
+
+
+
+### check mainitain
+GET http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/game/check-maintain
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NTYsInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjowLCJ0ZWFjaGVyX25hbWUiOiIiLCJoZWFkX3RlYWNoZXJfaWQiOjAsImhlYWRfdGVhY2hlcl9uYW1lIjoiIiwiaXNfc3VwZXJfdXNlciI6dHJ1ZSwiZXhwIjoxNjgwNjg2ODY0fQ._gPY7vouJg4kiDbOmxJorVWC1IeqnAcTfd77mY5btak
+
+
+### business game list
+POST http://higo-api-dev.elf-go.com/api/v3/game-service/public/admin/game/business-view
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0MTksInNjaG9vbF9pZCI6MSwiYnJhbmNoX2lkIjoxLCJ0ZWFjaGVyX2lkIjo2MTQsInRlYWNoZXJfbmFtZSI6IuS5lOacieaciSIsImhlYWRfdGVhY2hlcl9pZCI6MCwiaGVhZF90ZWFjaGVyX25hbWUiOiIiLCJpc19zdXBlcl91c2VyIjp0cnVlLCJleHAiOjE2ODY2MzUwNTh9.gN-nZCv2_n7e4xHkThnP0hFyNKYqNQjPrSxUVEBs_yQ
+Content-Type: application/json
+
+{
+  "start_time": 1656592120,
+  "end_time": 1686030200
+}

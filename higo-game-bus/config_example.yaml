@@ -1,0 +1,14 @@
+http:
+  port: 8081
+database:
+  host: pg1.dev.estargo.com.cn
+  port: 5432
+  user: higo-dev
+  password: eStarGo2019
+  dbname: higo-game-dev
+redis:
+  host: redis2.dev.estargo.com.cn
+  port: 6379
+  channel: 1
+third_service:
+  game_lb_service: 127.0.0.1

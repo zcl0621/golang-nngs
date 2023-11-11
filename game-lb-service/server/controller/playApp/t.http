@@ -1,0 +1,109 @@
+### info
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/info?game_id=3721432
+Content-Type: application/json
+
+{
+  "game_id": 3721432,
+  "user_id": "3",
+  "user_hash": "3:1"
+}
+
+
+### benter
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/enter?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 203210,
+  "user_id": "3",
+  "user_hash": "3:1"
+}
+
+### wenter
+POST http://127.0.0.1:8080/api/v3/game-service/play/enter?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 203210,
+  "user_id": "67065",
+  "user_hash": "67065:1"
+}
+
+
+### Bmove
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/move?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 203210,
+  "user_id": "3",
+  "user_hash": "3:1",
+  "x": 4,
+  "y": 10,
+  "c": 1
+}
+
+### Wmove
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/move?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 203210,
+  "user_id": "6",
+  "user_hash": "6:1",
+  "x": 2,
+  "y": 3,
+  "c": 2
+}
+
+### Bpass
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/pass?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 216009,
+  "user_id": "9922",
+  "user_hash": "9922:1",
+  "c": 1
+}
+
+### wpass
+POST http://127.0.0.1:8080/api/v3/game-service/play/pass?game_id=19574
+Content-Type: application/json
+
+{
+  "game_id": 19574,
+  "user_id": "67065",
+  "user_hash": "67065:1",
+  "c": 2
+}
+
+
+### resign
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/resign
+Content-Type: application/json
+
+{
+  "game_id": 203210,
+  "user_id": "6",
+  "user_hash": "6:1"
+}
+
+### areascore
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/apply-score
+Content-Type: application/json
+
+{
+  "game_id": 216009,
+  "user_id": "100",
+  "user_hash": "100:1"
+}
+### areascore
+POST https://higo-api-dev.elf-go.com/api/v3/game-service/play/score
+Content-Type: application/json
+
+{
+  "game_id": 216009,
+  "user_id": "100",
+  "user_hash": "100:1"
+}

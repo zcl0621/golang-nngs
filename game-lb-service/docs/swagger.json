@@ -1,0 +1,1029 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/v3/game-service/inner/area-score": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "数目",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.OwnershipRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.InnerAreaScoreResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/inner/call-end": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "内部"
+                ],
+                "summary": "结束",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.CallEndRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.StandardResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/inner/init": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "初始化(内部)",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.StandardResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/agree-score": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "同意数目",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.EndResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/agree-summation": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "同意和棋",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.EndResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/apply-score": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "申请数目",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/apply-summation": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "申请和棋",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/canplay": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "落子方",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.CanPlayResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/enter": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "进入",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.EnterRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/info": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "基础信息",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.InfoResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/move": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "落子",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.MoveRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.MoveResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/ownership": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "形势判断",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.OwnershipRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.OwnerShipResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/pass": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "停一手",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.PassRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.PassResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/reject-score": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "拒绝数目",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/reject-summation": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "拒绝和棋",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/resign": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "认输",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.ResignRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.EndResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/play/score": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "数目",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.EndResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v3/game-service/player/sgf": {
+            "post": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "对弈"
+                ],
+                "summary": "sgf",
+                "parameters": [
+                    {
+                        "description": "对弈",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/request.InfoRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/responses.SGFResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "request.CallEndRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "win",
+                "win_result"
+            ],
+            "properties": {
+                "end_time": {
+                    "type": "integer"
+                },
+                "game_id": {
+                    "type": "integer"
+                },
+                "sgf": {
+                    "type": "string"
+                },
+                "start_time": {
+                    "type": "integer"
+                },
+                "win": {
+                    "description": "1 黑 2 白 3 和",
+                    "type": "integer"
+                },
+                "win_result": {
+                    "description": "输赢原因 B+R 黑胜白认输 B+T 黑胜白超时 W+R 白胜黑认输 W+T 白胜黑超时 B+C1 黑胜吃1子 W+C1 白胜吃一子 B+L 黑胜白未参加 W+L 白胜黑未参加 Draw 和",
+                    "type": "string"
+                }
+            }
+        },
+        "request.EnterRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "user_hash",
+                "user_id"
+            ],
+            "properties": {
+                "game_id": {
+                    "type": "integer"
+                },
+                "user_hash": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.InfoRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "user_hash",
+                "user_id"
+            ],
+            "properties": {
+                "game_id": {
+                    "type": "integer"
+                },
+                "user_hash": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.MoveRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "user_hash",
+                "user_id"
+            ],
+            "properties": {
+                "c": {
+                    "type": "integer"
+                },
+                "game_id": {
+                    "type": "integer"
+                },
+                "user_hash": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                },
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                }
+            }
+        },
+        "request.OwnershipRequest": {
+            "type": "object",
+            "properties": {
+                "game_id": {
+                    "type": "integer"
+                },
+                "sgf": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.PassRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "user_hash",
+                "user_id"
+            ],
+            "properties": {
+                "c": {
+                    "type": "integer"
+                },
+                "game_id": {
+                    "type": "integer"
+                },
+                "user_hash": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.ResignRequest": {
+            "type": "object",
+            "required": [
+                "game_id",
+                "user_hash",
+                "user_id"
+            ],
+            "properties": {
+                "game_id": {
+                    "type": "integer"
+                },
+                "user_hash": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "responses.AnalysisRootInfo": {
+            "type": "object",
+            "properties": {
+                "currentPlayer": {
+                    "type": "string"
+                },
+                "scoreLead": {
+                    "type": "number"
+                },
+                "scoreSelfplay": {
+                    "type": "number"
+                },
+                "scoreStdev": {
+                    "type": "number"
+                },
+                "symHash": {
+                    "type": "string"
+                },
+                "thisHash": {
+                    "type": "string"
+                },
+                "utility": {
+                    "type": "number"
+                },
+                "visits": {
+                    "type": "integer"
+                },
+                "winrate": {
+                    "type": "number"
+                }
+            }
+        },
+        "responses.AnalysisScoreData": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "ownership": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "rootInfo": {
+                    "$ref": "#/definitions/responses.AnalysisRootInfo"
+                }
+            }
+        },
+        "responses.CanPlayResponse": {
+            "type": "object",
+            "properties": {
+                "next_color": {
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.EndResponse": {
+            "type": "object",
+            "properties": {
+                "win": {
+                    "description": "0 无 1 黑 2 白",
+                    "type": "integer"
+                },
+                "win_result": {
+                    "description": "输赢原因",
+                    "type": "string"
+                }
+            }
+        },
+        "responses.InfoResponse": {
+            "type": "object",
+            "properties": {
+                "black_byo_yomi": {
+                    "type": "integer"
+                },
+                "black_byo_yomi_time": {
+                    "type": "integer"
+                },
+                "black_captured": {
+                    "type": "integer"
+                },
+                "black_enter": {
+                    "type": "boolean"
+                },
+                "black_return_stone": {
+                    "type": "number"
+                },
+                "black_score": {
+                    "type": "number"
+                },
+                "black_time": {
+                    "type": "integer"
+                },
+                "black_user_account": {
+                    "type": "string"
+                },
+                "black_user_actual_name": {
+                    "type": "string"
+                },
+                "black_user_avatar": {
+                    "type": "string"
+                },
+                "black_user_hash": {
+                    "type": "string"
+                },
+                "black_user_id": {
+                    "type": "string"
+                },
+                "black_user_level": {
+                    "type": "string"
+                },
+                "black_user_name": {
+                    "type": "string"
+                },
+                "black_user_nick_name": {
+                    "type": "string"
+                },
+                "black_user_online": {
+                    "type": "boolean"
+                },
+                "black_user_type": {
+                    "type": "integer"
+                },
+                "board_size": {
+                    "description": "9 13 19",
+                    "type": "integer"
+                },
+                "business_type": {
+                    "description": "业务类型",
+                    "type": "string"
+                },
+                "enable_move_time": {
+                    "description": "是否开启第一步倒计时 0 否 1 是",
+                    "type": "integer"
+                },
+                "end_time": {
+                    "type": "integer"
+                },
+                "is_end": {
+                    "type": "boolean"
+                },
+                "is_start": {
+                    "type": "boolean"
+                },
+                "km": {
+                    "description": "贴目",
+                    "type": "number"
+                },
+                "max_step": {
+                    "type": "integer"
+                },
+                "move_time": {
+                    "description": "单步落子时长",
+                    "type": "integer"
+                },
+                "not_enter_time": {
+                    "description": "一方未进入或两方都未进入 强制结束时间",
+                    "type": "integer"
+                },
+                "now_black_byo_yomi": {
+                    "type": "integer"
+                },
+                "now_black_byo_yomi_time": {
+                    "type": "integer"
+                },
+                "now_black_time": {
+                    "type": "integer"
+                },
+                "now_move_time": {
+                    "type": "integer"
+                },
+                "now_white_byo_yomi": {
+                    "type": "integer"
+                },
+                "now_white_byo_yomi_time": {
+                    "type": "integer"
+                },
+                "now_white_time": {
+                    "type": "integer"
+                },
+                "start_time": {
+                    "type": "integer"
+                },
+                "step": {
+                    "type": "integer"
+                },
+                "summation_count": {
+                    "description": "申请和棋数量",
+                    "type": "integer"
+                },
+                "territory_step": {
+                    "type": "integer"
+                },
+                "turn": {
+                    "type": "integer"
+                },
+                "white_byo_yomi": {
+                    "type": "integer"
+                },
+                "white_byo_yomi_time": {
+                    "type": "integer"
+                },
+                "white_captured": {
+                    "type": "integer"
+                },
+                "white_enter": {
+                    "type": "boolean"
+                },
+                "white_score": {
+                    "type": "number"
+                },
+                "white_time": {
+                    "type": "integer"
+                },
+                "white_user_account": {
+                    "type": "string"
+                },
+                "white_user_actual_name": {
+                    "type": "string"
+                },
+                "white_user_avatar": {
+                    "type": "string"
+                },
+                "white_user_hash": {
+                    "type": "string"
+                },
+                "white_user_id": {
+                    "type": "string"
+                },
+                "white_user_level": {
+                    "type": "string"
+                },
+                "white_user_name": {
+                    "type": "string"
+                },
+                "white_user_nick_name": {
+                    "type": "string"
+                },
+                "white_user_online": {
+                    "type": "boolean"
+                },
+                "white_user_type": {
+                    "type": "integer"
+                },
+                "win": {
+                    "description": "0 无 1 黑 2 白 3 和 4 弃权",
+                    "type": "integer"
+                },
+                "win_capture": {
+                    "type": "integer"
+                },
+                "win_result": {
+                    "description": "输赢原因 B+2.5 黑胜2.5目 W+2.5 白胜2.5目 B+R 黑胜白认输 B+T 黑胜白超时 W+R 白胜黑认输 W+T 白胜黑超时 B+C1 黑胜吃1子 W+C1 白胜吃一子 B+L 黑胜白未参加 W+L  白胜黑未参加 B+A 黑胜仲裁 W+A 白胜仲裁 Draw 和 Abstain 弃权",
+                    "type": "string"
+                }
+            }
+        },
+        "responses.InnerAreaScoreResponse": {
+            "type": "object",
+            "properties": {
+                "b_score": {
+                    "type": "number"
+                },
+                "controversy_count": {
+                    "type": "integer"
+                },
+                "end_score": {
+                    "type": "number"
+                },
+                "w_score": {
+                    "type": "number"
+                }
+            }
+        },
+        "responses.MoveResponse": {
+            "type": "object",
+            "properties": {
+                "next_color": {
+                    "description": "下一步颜色 0 任意 1 黑 2 白",
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.OwnerShip": {
+            "type": "object",
+            "properties": {
+                "c": {
+                    "type": "integer"
+                },
+                "size": {
+                    "type": "number"
+                },
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.OwnerShipResponse": {
+            "type": "object",
+            "properties": {
+                "analysis_data": {
+                    "$ref": "#/definitions/responses.AnalysisScoreData"
+                },
+                "ownership": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/responses.OwnerShip"
+                    }
+                }
+            }
+        },
+        "responses.PassResponse": {
+            "type": "object",
+            "properties": {
+                "next_color": {
+                    "description": "下一步颜色 0 任意 1 黑 2 白",
+                    "type": "integer"
+                }
+            }
+        },
+        "responses.SGFResponse": {
+            "type": "object",
+            "properties": {
+                "sgf": {
+                    "type": "string"
+                }
+            }
+        },
+        "responses.StandardResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "0 成功 1失败",
+                    "type": "integer"
+                },
+                "data": {},
+                "message": {
+                    "description": "提示语",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

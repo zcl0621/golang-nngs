@@ -1,0 +1,31 @@
+http:
+  port: 8888
+database:
+  host: pg1.dev.estargo.com.cn
+  port: 5432
+  user: higo-dev
+  password: eStarGo2019
+  dbname: higo-game-dev
+redis:
+  host: redis2.dev.estargo.com.cn
+  port: 6379
+  channel: 1
+mongodb:
+  host: mongo1.dev.estargo.com.cn
+  port: 3717
+  user: root
+  password: 2zzmwRpo2gpg
+pod:
+  game_pod_name: game-node
+  game_pod_numb: 3
+third_service:
+  ws_service: 127.0.0.1:8082
+  ai_agent: go-agent-ai.prd.estargo.com.cn
+  go_score: go-score.prd.estargo.com.cn
+rule:
+  move_time: 300
+  area_score_time_interval: 3
+  area_score_time: 60
+  summation_time_interval: 3
+  summation_time: 60
+  summation_count: 3
